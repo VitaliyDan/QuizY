@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>QuizY</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/spinner.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <script src="src/spinner.js"></script>
+  <script src="services/additionalFunctions.js"></script>
+
+
+</head>
+<body>
+<div id="Registration" style="display: none">
+  <div id="button-bar">
+    <button id="signin" class="btn-style">SignIn</button>
+    <button id="signup" class="btn-style">Signup</button>
+  </div>
+
+  <div id="first">
+    <form>
+      <input class="reg-inputs" type="email" placeholder="Enter your email">
+      <input class="reg-inputs" type="password" placeholder="Enter your password">
+      <button type="submit" id="submit-login" class="btn-style">LOGIN</button>
+    </form>
+  </div>
+  <div id="second" style="display: none">
+    <form>
+      <input class="reg-inputs" type="text" placeholder="Enter your name">
+      <input class="reg-inputs" type="email" placeholder="Enter your email">
+      <input class="reg-inputs" type="password" placeholder="Enter your password">
+      <button type="button" id="submit-registr" class="btn-style">SUBMIT</button>
+    </form>
+  </div>
+</div>
+<div id="myProfile" style="display: none">
+<section class='side-panel'>
+  <header>
+    <div class='title'>
+      <span>QuizY</span>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li>
+        <a id="Profile" title='Profile'>
+          <span>Profile</span>
+          <i class="fa-regular fa-user" style="color: #ffffff;"></i>
+        </a>
+      </li>
+      <li>
+        <a id="YourQuizyS" title='Your QuizYs'>
+          <span>Your QuizYs</span>
+          <i class='fa fa-list'></i>
+        </a>
+      </li>
+      <li>
+        <a id="PublicQuizyS" title='Public QuizyS'>
+          <span>Public Quizzes</span>
+          <i class="fa-solid fa-users" style="color: #ffffff;"></i>
+        </a>
+      </li>
+      <li>
+        <a id="logout" title='logout'>
+          <span>logout</span>
+          <i class="fa-solid fa-right-from-bracket" style="color: #e32400;"></i>
+        </a>
+      </li>
+      <li>
+        <a href='https://www.linkedin.com/in/vitaliy-danaykanich-9890a8217/' title='Social'>
+          <span>Social</span>
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+    <span style="color: white; margin: auto" >v1.0.0</span>
+</section>
+
+  <section class='content' id="profilePanel" style="display: none">
+    <div style="width: 100%; background-color: darkcyan;">
+      <div class="profile-name">
+        <i class="fa-regular fa-user" style="color: #ffffff;"></i>
+        <h2 class="user-name" style="margin-left: 15px;"></h2>
+      </div>
+
+    </div>
+        <div style="margin: auto;color: #1d252c;height: 100%;width: 40px;">
+          <h2 style="width: max-content">TOP USERS</h2>
+        </div>
+    <div class="topUsers">
+      <div class="namespace">
+        <span class="user-id">ID</span>
+        <span class="user-name-item">NAME</span>
+        <span class="user-count">QUESTIONS</span>
+        <span class="published">PUBLISHED</span>
+      </div>
+      <div class='list'>
+        <ul class='items'>
+            <!--RENDER LISTS-->
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+<section class='head-panel' id="yourQuizzes" style="display: none">
+
+  <main>
+    <section class='content'>
+      <div class='top'>
+        <div class='name-box'>
+          <span>Your Quizzes</span>
+        </div>
+        <div class="button-container">
+          <button class="create-quiz">CREATE</button>
+        </div>
+        <div class="create-modal" style="display: none">
+          <span class="close-modal close-create-quiz">&#10006;</span>
+          <h1 style="margin: 0;">CREATE QUIZ</h1>
+          <h2 class="question-txt"></h2>
+          <div class="create-question-action">
+            <input type="text" class="questionInputs" id="questionInput" placeholder="Enter question">
+            <button id="addQuestionBtn" class="question-btn">Add Question</button>
+          </div>
+          <div id="questionsList" style="width: 100%;">
+            <div class="items-answers"></div>
+            <textarea class="questionInputs" id="answerInput" placeholder="Enter answer" style="display: none"></textarea>
+          </div>
+
+          <div id="actions" style="display: none">
+            <button id="addAnswer" class="question-btn">Add answer</button>
+            <button id="saveQuizBtn" class="question-btn">Save Quiz</button>
+          </div>
+        </div>
+      </div>
+      <div class='list'>
+        <ul class='items'>
+          <div class="heder-for-questions" style="width: 100%;">
+            <div class='options' id='option' title='Options'>
+              <svg viewBox='0 0 60 60' x='0px' xmlns='http://www.w3.org/2000/svg' y='0px'>
+                <path d='M30,16c4.411,0,8-3.589,8-8s-3.589-8-8-8s-8,3.589-8,8S25.589,16,30,16z'></path>
+                <path d='M30,44c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,44,30,44z'></path>
+                <path d='M30,22c-4.411,0-8,3.589-8,8s3.589,8,8,8s8-3.589,8-8S34.411,22,30,22z'></path>
+              </svg>
+              <div class="function-buttons">
+                <button class="delete-button">Delete</button>
+                <button class="public-button">Public</button>
+              </div>
+            </div>
+            <div style="display: inline-block; vertical-align: middle; text-align: center">Quiz</div>
+            <div style="display: inline-block; vertical-align: middle; text-align: center">Status</div>
+            <div style="display: inline-block; vertical-align: middle; text-align: center">Date Creation</div>
+          </div>
+          <div class="items-list-question">
+            <!--render-->
+          </div>
+
+        </ul>
+      </div>
+    </section>
+  </main>
+</section>
+
+  <section class='head-panel' id="publicQuizzes" style="display: none">
+    <main>
+      <section class='content'>
+        <div class='top'>
+          <div class='name-box'>
+            <span>Public Quizzes</span>
+          </div>
+        </div>
+        <div class='list-public-question'>
+          <ul class='items'>
+           <!-- RENDER -->
+          </ul>
+        </div>
+      </section>
+    </main>
+  </section>
+</div>
+
+<div class="error-modal" id="myModal" style="display: none">
+  <span class="close-modal close-error-modal" style="color: red">✖</span>
+  <p></p>
+</div>
+
+<div class="modal-overlay" style="display: none"></div>
+<div class="modal-for-callback" style="display: none">
+  <div class="modal-header">
+    <h2>Modal Title</h2>
+    <span class="close-modal">✖</span>
+  </div>
+  <div class="modal-content">
+    <label>
+      <input type="checkbox" style="display: none">
+      <i class="fa-regular fa-circle" style="color: #669c35;"></i> Option 1
+    </label>
+    <label>
+      <input type="checkbox" style="display: none">
+      <i class="fa-regular fa-circle" style="color: #669c35;"></i> Option 2
+    </label>
+    <label>
+      <input type="checkbox" style="display: none">
+      <i class="fa-regular fa-circle" style="color: #669c35;"></i> Option 3
+    </label>
+  </div>
+  <div class="modal-buttons">
+    <button class="cancel-button">Cancel</button>
+    <button class="respond-button">Respond</button>
+  </div>
+</div>
+
+<div class="modal-for-confirm-code" style="display: none">
+  <div class="modal-header">
+    <h2>Confirm Email:</h2>
+    <span class="close-modal">✖</span>
+  </div>
+  <div  style="align-items: center; display: flex; flex-direction: column;">
+    <input type="text" id="confirm-code" placeholder="Enter email code" style="margin: 10px;">
+  </div>
+  <div class="modal-buttons">
+    <button id="try-demo" data-check-option="0" class="btn-style">TRY DEMO</button>
+    <button type="button" data-check-option="1" id="confirm-code-button" class="btn-style" style="margin-left: 10px">CONFIRM</button>
+  </div>
+</div>
+
+
+<!-- SPINER-->
+
+<div id="spinner-container" class="hide spinner overlay">
+  <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#008c94" />
+        <stop offset="40%" stop-color="#34c78c" />
+        <stop offset="100%" stop-color="#004f74" />
+      </linearGradient>
+    </defs>
+    <circle class="pl__ring" r="56" cx="64" cy="64" fill="none" stroke="hsla(0, 10%, 10%, 1);" stroke-width="16" stroke-linecap="round" />
+    <path class="pl__worm" d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z" fill="none" stroke="url(#pl-grad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="44 1111" stroke-dashoffset="10" />
+  </svg>
+</div>
+
+  <script src="src/auth.js"></script>
+  <script src="src/user.js"></script>
+  <script src="src/questions.js"></script>
+<script src="src/publicQuestions.js"></script>
+</body>
+</html>

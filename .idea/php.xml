@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/backEnd/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/sendgrid/php-http-client" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/starkbank/ecdsa" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/sendgrid/sendgrid" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/php-di/invoker" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/php-di/php-di" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/composer" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/illuminate/conditionable" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/backEnd/vendor/ramsey/collection" />
+    </include_path>
+  </component>
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>

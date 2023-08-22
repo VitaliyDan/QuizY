@@ -1,0 +1,23 @@
+License for QuizY (Version 1.0)
+
+Copyright (c) [2023] [Danaykanich Vitaliy]
+
+This product is private software and is not intended for public distribution.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"). It is prohibited
+to modify, alter, combine with other software, and make any changes to the Software
+in any way.
+
+Usage of the Software is permitted for individuals who have been granted access to
+the Software, under the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies
+or substantial portions of the Software.
+The Software is provided "as is," without warranty of any kind, express or implied,
+including but not limited to the warranties of merchantability, fitness for a particular
+purpose, and non-infringement. The authors or copyright holders shall not be liable for
+any claims, damages, or other liability, whether in an action of contract, tort, or otherwise,
+arising from, out of, or in connection with the Software.
+
+Author: Danaykanich Vitaliy
